@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1B2A"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Titre -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚓ GPS2OpenCPN"
+            android:textColor="#00C8FF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GPS Samsung → Bluetooth → OpenCPN"
+            android:textColor="#7FB3C8"
+            android:textSize="12sp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Sélection appareil BT -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PC CIBLE (appairé via Bluetooth)"
+            android:textColor="#7FB3C8"
+            android:textSize="11sp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="6dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerDevices"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#1A2E42"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Bouton Start/Stop -->
+        <Button
+            android:id="@+id/btnStartStop"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="▶  DÉMARRER"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2E7D32"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Carte statut -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1A2E42"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STATUT"
+                android:textColor="#7FB3C8"
+                android:textSize="10sp"
+                android:textAllCaps="true"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="En attente…"
+                android:textColor="#E0F0FF"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!-- Carte GPS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1A2E42"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="POSITION GPS"
+                android:textColor="#7FB3C8"
+                android:textSize="10sp"
+                android:textAllCaps="true"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tvGpsInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="—"
+                android:textColor="#00C8FF"
+                android:textSize="13sp"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+        <!-- Dernière trame NMEA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1A2E42"
+            android:padding="14dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DERNIÈRE TRAME NMEA"
+                android:textColor="#7FB3C8"
+                android:textSize="10sp"
+                android:textAllCaps="true"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tvNmea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="—"
+                android:textColor="#4CAF50"
+                android:textSize="11sp"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
